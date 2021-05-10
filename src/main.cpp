@@ -25,18 +25,6 @@ int main() {
 	stringTree.printPostOrder();
 	stringTree.printPreOrder();
 	
-	int counter = 0;
-	stringTree.count(counter);
-	std::cout << counter << std::endl;
-	
-	// for (int i = 0; i < sizeof(initialStrings)/sizeof(initialStrings[0]); i++) {
-	// 	Node<std::string>* foo = stringTree.find(initialStrings[i]);
-	// 	std::cout << foo->data << std::endl;
-	// }
-	// 
-	// Node<std::string>* foo = stringTree.find("foo");
-	// std::cout << foo << std::endl;
-	// 
 
 	stringTree.remove("Pikachu");
 	stringTree.printInOrder();
