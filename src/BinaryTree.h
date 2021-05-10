@@ -233,8 +233,7 @@ template <class T> bool BinaryTree<T>::remove(T data) {
 				parentFound = true;
 				parent = parent->left;
 			}
-		}
-		if (parent->right) {
+		} else if (parent->right) {
 			if (parent->right->data == data) {
 				parentFound = true;
 				parent = parent->right;
@@ -243,10 +242,14 @@ template <class T> bool BinaryTree<T>::remove(T data) {
 			if (data > parent->data) {
 				if (parent->right != nullptr) {
 					parent = parent->right;
+				} else if (parent->left != nullptr) {
+					parent = parent->left;
 				}
 			} else if (data < parent->data) {
 				if (parent->left != nullptr) {
 					parent = parent->left;
+				} else if (parent->right != nullptr) {
+					parent = parent->right;
 				}
 			}
 		}
